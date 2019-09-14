@@ -7,9 +7,14 @@
     "tslint-plugin-prettier"
   ],
   "rules": {
-    "rules": {
-      "prettier": true
-    },
+    "prettier": [true, {
+      "singleQuote": true,
+      "jsxSingleQuote": true,
+      "trailingComma": "all",
+      "semi": true
+    }],
+    // tslint
+    "indent": [true, "spaces", 2],
     "ordered-imports": true,
     "quotemark": [
       true,
@@ -17,7 +22,7 @@
       "jsx-single",
       "avoid-escape"
     ],
-    "semicolon": [true, "always"],
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
     "member-access": false,
     "member-ordering": false,
     "trailing-comma": [
@@ -29,22 +34,24 @@
     ],
     "no-empty": false,
     "no-submodule-imports": false,
-    "no-constant-condition": false,
     "triple-equals": [true, "allow-undefined-check"],
+    "interface-name": [true, "never-prefix"],
+    "object-literal-sort-keys": false,
+    "no-console": false,
+    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore", "allow-pascal-case"],
+    // tslint-react
+    "jsx-alignment": true,
+    "jsx-no-bind": true,
+    "jsx-no-lambda": false,
+    "jsx-no-multiline-js": false,
+    // tslint-eslint-rules
+    "no-constant-condition": false,
     "ter-indent": [
       true,
       2,
       {
         "SwitchCase": 1
       }
-    ],
-    "jsx-alignment": true,
-    "jsx-no-bind": true,
-    "jsx-no-lambda": false,
-    "jsx-no-multiline-js": false,
-    "interface-name": [true, "never-prefix"],
-    "object-literal-sort-keys": false,
-    "no-console": false,
-    "variable-name": [true, "ban-keywords", "check-format", "allow-leading-underscore"]
+    ]
   }
 }
